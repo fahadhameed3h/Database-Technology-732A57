@@ -1,0 +1,11 @@
+/* Question-9*/
+/*
+  Opening 2 terminals at same time and after "Start Transaction". I add a new reservation in first terminal which added a reservation successfully but on the other terminal no reservation was added when check using "select * from Reservation;". This is beacuse the reservation is not added in the database but just stored in that terminal and not committed.
+Updating Reservation in terminal B caused the following error:
+
+ERROR 1205 (HY000): Lock wait timeout exceeded; try restarting transaction
+
+This is beacuse the terminal B transaction is locked as it is bein used in other terminal with Write Lock. So the transaction query is time out until the commint in terminal A occurs. Which is the concept of isolation.
+
+*/
+

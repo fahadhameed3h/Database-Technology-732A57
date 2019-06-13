@@ -1,0 +1,34 @@
+/* Question-10 Part-a*/
+/*
+Overbooking did not oocured because 21 seats were already booked by first A terminal so when in the second B terminal tried to book more seats then availbe seats it failed to add more seats.  
+*/
+
+/* Question-10 Part-b*/
+/*
+Yes it is possible if both the payments occurs in parallel. In code if both payments have passed the following statement in the procedure:
+	 number_of_passengers > (calculateFreeSeats(InFlight))
+When both will check before the payment is made by any, they will get enough seats and after this check both can add reservation which will cause theoratical overbooking.
+*/
+
+/* Question-10 Part-c*/
+/*
+It was not possible to make overbooking while using 2 sessions because the first terminal add passengers and after it the second one do the same process
+of adding reservatin, passangers. When both after these try to add payment before adding payemnt it checks for number of free seats which is less 
+then the required so the overbooking do not occur.
+Adding Sleep(5) can make overbooking if both scripts are run in parallel and when they check for number of free seats it is more for both.
+*/
+
+/* Question-10 Part-d*/
+/*
+Using LOCKS can solve the problem of overbooking as it locks  all tables in Mysql, Other tables can 
+not access data until it is used by first table. So it will first make payment and then the second payment procedure can be called after unlocking.
+This can be done by using LOCK TABLES and UNLOCK TABLES queries in the beginning and end.
+*/
+
+/*
+Secondary Index:
+
+We are using ReservationNumber and PassportNumber as primary key in Ticket table. Using TicketNumber as secondary index in Ticket table
+can decrease the time required to access the data as it will be a linear search. Where as using  ReservationNumber and PassportNumber requires to go through all 
+tables to find correct ticket.
+*/

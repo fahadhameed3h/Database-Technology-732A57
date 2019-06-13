@@ -1,0 +1,16 @@
+/* Question-8 Part-a*/
+/*
+We can take many protective measures to protect our credit card information in the database from hackers like:
+1) Storing credit card information in encrypted form.
+2) Using secure locking envoirnment allowing access to only authorized accounts. Which will protect from unauthorize access. 
+3) Ensuring database and Web application firewalls.
+4) Strong password protection, hashing passwords, locking account on wrong password and repeated login.
+*/
+
+/* Question-8 Part-b*/
+/*
+Using Stored procedures have many advantages over front end web application code.
+1) As Database is fast using stored procedure can enhance the insertion and access speed, reducing client server communication.
+2) We can use same stored procedure for all different types of applications without considering which web framework is used.
+3) Store procedures is secure as it reduce risk of hacking and also level of access to user can be assigned.
+*/
