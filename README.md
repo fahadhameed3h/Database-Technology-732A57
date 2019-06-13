@@ -1,5 +1,5 @@
-## Course Name: Database Technology
-## Course Code: 732A57
+Course Name: ## Database Technology
+Course Code: ## 732A57
 
 ### Lab 1
 SQL queries and views
